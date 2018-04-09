@@ -19,6 +19,10 @@ class Contact<ActiveRecord::Base
     return "#{email}"
   end
 
+  def note_display
+    return "#{note}"
+  end
+
 end
 
 Contact.auto_upgrade!

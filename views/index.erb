@@ -2,9 +2,21 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Home</title>
   </head>
   <body>
-    <h1>Welcome to My CRM</h1>
+
+    <h1>Welcome to contacts</h1>
+
+    <h3> There are <%= @contactnum %> contacts </h3>
+
+    <ul>
+      <% @contactlist.each do |contact| %>
+        <li><%= contact.full_name + " email address: " + contact.email_address + " note: " + contact.note_display %>
+            <br /><a href = "#"> Edit</a> | <a href = "#"> Delete </a>
+        </li>
+      <% end %>
+    </ul>
+
   </body>
 </html>
