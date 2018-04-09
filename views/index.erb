@@ -2,18 +2,16 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title></title>
   </head>
   <body>
 
-    <h1>Welcome to contacts</h1>
-
-    <h3> There are <%= @contactnum %> contacts </h3>
+    <div class="contact_num"> There are <span><%= @contactnum %></span> contacts </div>
 
     <ul>
       <% @contactlist.each do |contact| %>
-        <li><%= contact.full_name + " email address: " + contact.email_address + " note: " + contact.note_display %>
-            <br /><a href = "#"> Edit</a> | <a href = "#"> Delete </a>
+        <li><%= contact.full_name + " (" + contact.email_address + ") " %>
+            <p><a href = "#"> Edit</a> | <a href = "#"> Delete </a></p>
         </li>
       <% end %>
     </ul>
